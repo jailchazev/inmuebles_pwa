@@ -16,22 +16,14 @@
     <header>
         <div class="logo-container">
             <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo Melina Inmuebles" class="logo-img">
-            <a href="/" class="logo">TU LOTE AL TOQUE</a>
+            <span class="logo-text">TU LOTE AL TOQUE</span>
         </div>
-        <nav>
-            <a href="#">Nuestros proyectos</a>
-            <a href="#">Condominios</a>
-            <a href="#">Lotes</a>
-            <a href="#">Casas</a>
-            <a href="#" class="btn-whatsapp">Contáctanos</a>
-    </nav>
+        <a href="#" class="btn-whatsapp">Contáctanos</a>
     </header>
 
     <!-- Sección del Proyecto -->
     <section class="project-section">
         <h1>Proyecto: {{ proyecto.nombre }}</h1>
-    
-        <!-- Imagen y detalles -->
         <div class="project-content">
             <img src="{{ url_for('static', filename=proyecto.imagen) }}" alt="{{ proyecto.nombre }}" class="project-image">
             <div class="project-details">
@@ -44,70 +36,18 @@
                 </ul>
                 <div class="project-stats">
                     <div class="stat">
-                    <strong>Precio desde: {{ proyecto.precio }}
-                    <strong>Ubicación: {{ proyecto.ubicacion }} 
-                    <strong>Entrega: {{ proyecto.entrega }}
+                        <strong>Precio desde:</strong> {{ proyecto.precio }}
+                    </div>
+                    <div class="stat">
+                        <strong>Ubicación:</strong> {{ proyecto.ubicacion }}
+                    </div>
+                    <div class="stat">
+                        <strong>Entrega:</strong> {{ proyecto.entrega }}
                     </div>
                 </div>
-                <a href="#" class="btn-whatsapp">Consultar por WhatsApp</a>
+                <!--<a href="#" class="btn-whatsapp">Consulta por WhatsApp</a>-->
             </div>
         </div>
-    
-        <!-- Videos -->
-        {% if proyecto.videos %}
-        <div class="section-videos">
-            <h2> Videos del Proyecto </h2>
-            <div class="videos-grid">
-                {% for video in proyecto.videos %}
-                <div class="video-item">
-                    <h3>{{ video.titulo }}</h3>
-                    <div class="video-wrapper">
-                        <iframe 
-                            src="{{ video.url }}?controls=1&autoplay=0&rel=0&showinfo=0" 
-                            frameborder="0" 
-                            allowfullscreen 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
-                        </iframe>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-        {% endif %}
-    
-        <!-- Planos -->
-        {% if proyecto.planos %}
-        <div class="section-planos">
-            <h2> Planos del Proyecto </h2>
-            <div class="planos-grid">
-                {% for plano in proyecto.planos %}
-                    <div class="plano-item">
-                        <h3>{{ plano.nombre }}</h3>
-                        <img src="{{ url_for('static', filename=plano.imagen) }}" alt="{{ plano.nombre }}" class="plano-image">
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
-        {% endif %}
-    
-        <!-- Testimonios -->
-        {% if proyecto.testimonios %}
-        <div class="section-testimonios">
-            <h2> Testimonios de Clientes </h2>
-            <div class="testimonios-grid">
-                {% for testimonio in proyecto.testimonios %}
-                    <div class="testimonio-item">
-                        <img src="{{ url_for('static', filename=testimonio.imagen) }}" alt="{{ testimonio.nombre }}" class="testimonio-image">
-                        <div class="testimonio-text">
-                            <p>"{{ testimonio.texto }}"</p>
-                            <strong>{{ testimonio.nombre }}</strong>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
-        {% endif %}
-    
     </section>
 
     <!-- Formulario para solicitar información -->
@@ -125,7 +65,7 @@
                             <!--<select><option>+51</option></select>-->
                             <input type="tel" placeholder="Teléfono" required>
                         </div>
-                        <input type="email" placeholder="Correo electrónico o WhatsApp*" required class="full-width">
+                        <input type="email" placeholder="Correo electrónico*" required class="full-width">
                         <select class="full-width" required>
                             <option value="" disabled selected>Ubicación</option>
                             <option>Santa Leonor</option>
