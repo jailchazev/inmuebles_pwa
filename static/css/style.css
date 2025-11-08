@@ -1,0 +1,601 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #40e0d0;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #40e0d0;
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: #ADF802; /* Color más oscuro en hover */
+}
+
+nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #0056b3;
+}
+
+.btn-whatsapp {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #000;
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-2px);
+}
+
+/* Carrusel — ¡SOLO UNA IMAGEN A LA VEZ! */
+.carousel-section {
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+    margin: 2rem 0;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.7);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot.active {
+    background: white;
+}
+
+/* Formulario */
+.form-section {
+    padding: 3rem 0;
+    background: white;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.2rem;
+    color: #0056b3;
+    margin-bottom: 2rem;
+}
+
+.form-box {
+    background: #0056b3;
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.form-box h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-grid .full-width {
+    grid-column: span 2;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+}
+
+.phone-group {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.phone-group select {
+    width: 70px;
+    padding: 0.7rem;
+    border-radius: 8px;
+    border: none;
+}
+
+.checkbox-group {
+    text-align: left;
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.8rem;
+    cursor: pointer;
+    line-height: 1.4;
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin-top: 0.3rem;
+    width: 16px;
+    height: 16px;
+    accent-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.checkbox-label input[type="checkbox"]:focus {
+    outline: none;
+    border-color: #0056b3;
+    box-shadow: 0 0 0 2px rgba(0, 86, 179, 0.2);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 0.8rem;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #000;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.social-icon {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #FFD700;
+}
+
+footer p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Íconos de redes sociales */
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.social-links svg {
+    width: 28px;
+    height: 28px;
+    fill: currentColor;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links a:hover {
+    color: #FFD700;
+    transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    .phone-group {
+        flex-direction: column;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    .logo-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .logo-img {
+        width: 40px;
+        height: 40px;
+    }
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+}
+
+/* Estilos para la página del proyecto */
+.project-section {
+    padding: 3rem 0;
+    background: rgb(195, 208, 207);
+}
+
+.project-section h1 {
+    font-size: 2.5rem;
+    color: #0056b3;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.project-content {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-top: 2rem;
+}
+
+.project-image {
+    width: 40%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
+.project-details {
+    flex: 1;
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.project-details h2 {
+    font-size: 1.8rem;
+    color: #0056b3;
+    margin-bottom: 1rem;
+}
+
+.project-details p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.project-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.project-details ul li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.project-details ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #0056b3;
+    font-weight: bold;
+}
+
+.project-stats {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.stat {
+    background: #e0f7fa;
+    padding: 1rem;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+}
+
+.stat strong {
+    display: block;
+    color: #0056b3;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.btn-whatsapp {
+    display: inline-block;
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #000;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: transform 0.3s;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-2px);
+}
+
+/* Sección de Videos */
+.section-videos {
+    margin: 3rem 0;
+    padding: 2rem;
+    background: #f9f9f9;
+    border-radius: 15px;
+}
+
+.section-videos h2 {
+    font-size: 2rem;
+    color: #0056b3;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.video-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.video-item h3 {
+    margin-bottom: 0.5rem;
+    color: #0056b3;
+}
+
+/* Sección de Planos */
+.section-planos {
+    margin: 3rem 0;
+    padding: 2rem;
+    background: #f9f9f9;
+    border-radius: 15px;
+}
+
+.section-planos h2 {
+    font-size: 2rem;
+    color: #0056b3;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.planos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.plano-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.plano-item h3 {
+    margin-bottom: 0.5rem;
+    color: #0056b3;
+}
+
+.plano-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+}
+
+/* Sección de Testimonios */
+.section-testimonios {
+    margin: 3rem 0;
+    padding: 2rem;
+    background: #f9f9f9;
+    border-radius: 15px;
+}
+
+.section-testimonios h2 {
+    font-size: 2rem;
+    color: #0056b3;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.testimonios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.testimonio-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.testimonio-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.testimonio-text {
+    flex: 1;
+}
+
+.testimonio-text p {
+    margin-bottom: 0.5rem;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.testimonio-text strong {
+    display: block;
+    color: #0056b3;
+    font-weight: bold;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
