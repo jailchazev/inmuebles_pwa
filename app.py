@@ -18,7 +18,27 @@ PROYECTOS = {
         ],
         'precio': 'S/. 11,000',
         'ubicacion': 'Viru, La Libertad',
-        'entrega': 'En 10 meses'
+        'entrega': 'En 10 meses',
+        'videos': [
+            {'titulo': 'Recorrido por Santa Leonor', 'url': 'https://www.youtube.com/embed/dQw4w9WgXcQ'},  # Reemplaza con tu video real
+            {'titulo': 'Entrega de llaves', 'url': 'https://www.youtube.com/embed/abc123def456'}  # Ejemplo
+        ],
+        'planos': [
+            {'nombre': 'Ubicación del proyecto', 'imagen': 'images/plano1.jpg'},
+            {'nombre': 'Plano del proyecto', 'imagen': 'images/plano2.jpg'}
+        ],
+        'testimonios': [
+            {
+                'nombre': 'María González',
+                'texto': 'Compré mi lote en Santa Leonor y estoy encantada. La ubicación es perfecta y el proceso fue muy sencillo.',
+                'imagen': 'images/testimonio1.jpg'
+            },
+            {
+                'nombre': 'Carlos Ruiz',
+                'texto': 'Excelente inversión. El valor ha aumentado mucho desde que compré. Recomiendo este proyecto a todos.',
+                'imagen': 'images/testimonio2.jpg'
+            }
+        ]
     },
     'los-portales': {
         'nombre': 'Los Portales',
@@ -32,7 +52,20 @@ PROYECTOS = {
         ],
         'precio': 'S/. 31,000',
         'ubicacion': 'Virú, La Libertad',
-        'entrega': 'Inmediata'
+        'entrega': 'Inmediata',
+        'videos': [
+            {'titulo': 'Tour por Los Portales', 'url': 'https://www.youtube.com/embed/xyz789ijk012'}
+        ],
+        'planos': [
+            {'nombre': 'Plano General', 'imagen': 'images/plano3.jpg'}
+        ],
+        'testimonios': [
+            {
+                'nombre': 'Ana López',
+                'texto': 'Muy buena atención al cliente. Me ayudaron con todo el proceso de compra y financiamiento.',
+                'imagen': 'images/testimonio3.jpg'
+            }
+        ]
     },
     'chilca-estates': {
         'nombre': 'Chilca Estates',
@@ -46,7 +79,20 @@ PROYECTOS = {
         ],
         'precio': 'S/. 13,000',
         'ubicacion': 'Chilca, Lima',
-        'entrega': 'Inmediata'
+        'entrega': 'Inmediata',
+        'videos': [
+            {'titulo': 'Vista panorámica de Chilca Estates', 'url': 'https://www.youtube.com/embed/mno345pqr678'}
+        ],
+        'planos': [
+            {'nombre': 'Plano de Zona Residencial', 'imagen': 'images/plano4.jpg'}
+        ],
+        'testimonios': [
+            {
+                'nombre': 'Jorge Pérez',
+                'texto': 'El lugar es tranquilo y seguro. Ideal para una vida familiar. Muy contento con mi decisión.',
+                'imagen': 'images/testimonio4.jpg'
+            }
+        ]
     }
 }
 
