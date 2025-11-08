@@ -4,6 +4,8 @@ const urlsToCache = [
     '/static/css/style.css',
     '/static/js/main.js',
     '/static/images/carousel1.jpg',
+    '/static/images/carousel2.jpg',
+    '/static/images/carousel3.jpg',
     '/static/manifest.json'
 ];
 
