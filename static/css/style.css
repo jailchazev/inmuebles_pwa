@@ -227,7 +227,7 @@ nav .contact-btn:hover {
 .form-sidebar {
     position: fixed;
     right: 20px;
-    top: 150px;
+    top: 100px;
     width: 320px;
     background-color: #40e0d054;
     color: white;
