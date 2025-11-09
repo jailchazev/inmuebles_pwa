@@ -1,3 +1,8 @@
 git add .
-git commit -m "Fix: responsive y PWA en móvil"
+git commit -m "actualizado index, apy, style y proyecto"
 git push
+
+git commit -m "Configuración para Render, Actualización del index, proyecto y style"
+git commit -m "Actualice los estilos, agregue enlaces al nombre del titulo y actualice la pagina proyecto"
+
+git add app.py static/css/style.css
