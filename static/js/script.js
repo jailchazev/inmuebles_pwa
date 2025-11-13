@@ -138,17 +138,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Gallery Tabs
-    const tabs = document.querySelectorAll('.gallery-tabs button');
-    const content = document.querySelector('.gallery-content');
+// Gallery Tabs - Funcionalidad Dinámica
+const tabs = document.querySelectorAll('.gallery-tabs button');
+const tabContents = document.querySelectorAll('.tab-content');
 
-    tabs.forEach(tab => {
-        tab.addEventListener('click', function() {
-            tabs.forEach(t => t.classList.remove('active'));
-            this.classList.add('active');
-            content.innerHTML = `<p>Mostrando: ${this.textContent}</p>`;
-        });
+tabs.forEach(tab => {
+    tab.addEventListener('click', function() {
+        // Remover clase 'active' de todos los tabs
+        tabs.forEach(t => t.classList.remove('active'));
+        // Añadir clase 'active' al tab clickeado
+        this.classList.add('active');
+
+        // Ocultar todos los contenidos
+        tabContents.forEach(content => content.classList.remove('active'));
+        // Mostrar el contenido correspondiente
+        const tabId = this.getAttribute('data-tab');
+        document.getElementById(`${tabId}-tab`).classList.add('active');
     });
+});
 
     // Slider Dots
     const dots = document.querySelectorAll('.slider-dot');

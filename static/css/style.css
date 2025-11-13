@@ -530,12 +530,14 @@ nav .contact-btn:hover {
     border-radius: 30px;
     cursor: pointer;
     font-weight: 500;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 0 5px;
 }
 
 .gallery-tabs button.active {
     background-color: #0066B2;
     color: white;
+    transform: translateY(-2px);
 }
 
 .gallery-content {
@@ -543,11 +545,57 @@ nav .contact-btn:hover {
     padding: 20px;
     border-radius: 10px;
     min-height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    color: #666;
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Video y Foto Grid */
+.gallery-content .video,
+.gallery-content .foto {
+    margin-bottom: 20px;
+}
+
+.gallery-content img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: none;
+    height: 0;
+    visibility: hidden;
+}
+
+.gallery-content video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .gallery-tabs {
+        flex-wrap: wrap;
+    }
+
+    .gallery-tabs button {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    .gallery-content img,
+    .gallery-content video {
+        height: 150px;
+    }
+}
 }
 
 /* Map Section */
