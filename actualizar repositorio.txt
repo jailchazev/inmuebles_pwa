@@ -1,5 +1,5 @@
 git add .
-git commit -m "actualizado index, apy, style y proyecto"
+git commit -m "Actualice el color de fondo del siderbar"
 git push
 
 git commit -m "Configuración para Render, Actualización del index, proyecto y style"
