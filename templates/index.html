@@ -220,45 +220,10 @@ Vive en una zona tranquila, cerca de todo lo que necesitas.
                     He leído y acepto la <a href="#">Política para envío de comunicaciones comerciales</a>.
                 </label>
             </div>
-            <button type="button" class="submit-btn" id="next-step-btn">Solicitar información</button>
+            <!-- En el Paso 1 del formulario -->
+            <button type="button" class="submit-btn" id="send-info-btn">Solicitar información</button>
         </form>
     </div>
-
-    <!-- Paso 2: Verificación por SMS -->
-    <div id="step2" class="form-step" style="display: none;">
-        <p style="text-align: center; margin-bottom: 20px; font-size: 14px;">
-            Hemos enviado un sms con un código de 4 dígitos al<br>
-            <strong id="phone-display">+51 999555666</strong>
-        </p>
-
-        <!-- Inputs para código de 4 dígitos -->
-        <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 20px;">
-            <input type="text" maxlength="1" class="code-input" pattern="[0-9]" inputmode="numeric">
-            <input type="text" maxlength="1" class="code-input" pattern="[0-9]" inputmode="numeric">
-            <input type="text" maxlength="1" class="code-input" pattern="[0-9]" inputmode="numeric">
-            <input type="text" maxlength="1" class="code-input" pattern="[0-9]" inputmode="numeric">
-        </div>
-
-        <!-- Reenviar código -->
-        <p style="text-align: center; font-size: 12px; margin-bottom: 15px;">
-            ¿No recibiste el código? <a href="#" id="resend-code" style="color: white; text-decoration: underline;">Reenviar</a> (<span id="timer">6</span> segundos)
-        </p>
-
-        <!-- Horario preferido -->
-        <p style="margin-bottom: 10px; font-size: 14px;">¿En qué horario prefieres que te llamemos?</p>
-        <select style="width: 100%; padding: 12px; border-radius: 8px; border: none; background-color: white; color: #333; margin-bottom: 15px;">
-            <option value="">Elige el horario de tu preferencia</option>
-            <option value="mañana">Mañana (9:00 AM - 12:00 PM)</option>
-            <option value="tarde">Tarde (1:00 PM - 5:00 PM)</option>
-            <option value="noche">Noche (6:00 PM - 8:00 PM)</option>
-        </select>
-
-        <button type="button" class="submit-btn" id="send-final-btn">Enviar</button>
-    </div>
-
-    <!-- Botón de retroceso (solo visible en paso 2) -->
-    <button type="button" id="back-btn" style="background-color: transparent; color: white; border: 2px solid white; padding: 8px 15px; border-radius: 30px; font-weight: bold; margin-top: 15px; display: none; width: 100%;">← Volver</button>
-</div>
 
 <div class="whatsapp-container">
     <span class="whatsapp-text">¿Hablamos por WhatsApp?</span>

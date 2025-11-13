@@ -1,5 +1,5 @@
 git add .
-git commit -m "Actualice la pocisión del siderbar"
+git commit -m "Actualice el mensaje de texto para whatsapp"
 git push
 
 git commit -m "Configuración para Render, Actualización del index, proyecto y style"
