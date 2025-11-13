@@ -1,8 +1,23 @@
 git add .
-git commit -m "Actualice el color de fondo del siderbar"
+git commit -m "Actualice la pocisión del siderbar"
 git push
 
 git commit -m "Configuración para Render, Actualización del index, proyecto y style"
 git commit -m "Actualice los estilos, agregue enlaces al nombre del titulo y actualice la pagina proyecto"
 
 git add app.py static/css/style.css
+
+🛠️ Paso a Paso: Comandos Git para Actualizar tu Repositorio
+✅ Paso 1: Abre la terminal o CMD
+Navega a la carpeta de tu proyecto:
+cd C:\ruta\completa\tu-lote-al-toque
+✅ Paso 2: Verifica el estado de tus archivos
+git status
+Deberías ver los archivos modificados en rojo.
+
+✅ Paso 3: Añade todos los cambios al área de preparación
+git add .
+✅ Paso 4: Crea un commit con un mensaje descriptivo
+git commit -m "feat: actualización completa de la web con galería, formulario 2 pasos, footer y redes sociales"
+✅ Paso 5: Sube los cambios al repositorio remoto (GitHub)
+git push origin main
